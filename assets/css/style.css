@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0%;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: gibbs, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+header {
+    height: 100vh;
+    background-image: url("https://pixabay.com/get/50e9d641485bb114b2d9847ccf293f7a1c22dfe0565978417d2972d0/spacex-693229.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logoContainer {
+    display: flex;
+}
+
+.nasaImage {
+    width: 80px;
+}
+
+.spacexImage {
+    width: 150px;
+}
+
+.partitionGradient {
+    margin: 0px;
+    background-image: linear-gradient(#00467B, #00233E);
+    padding: 1px;
+}
+
+.apod {
+    width: 100%;
+}
+
+.img {
+    width: 100%;
+    will-change: transform; 
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+}
+
+@media all and (max-width: 480px) {
+    .logoContainer {
+        width: 10rem;
+    }
+}
