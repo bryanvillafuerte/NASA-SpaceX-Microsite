@@ -1,5 +1,16 @@
+// Function for the navigation menu.
+function openMenu() {
+    var menuIcon = document.getElementById("menuContainer");
+    if (menuIcon.style.display === "inline-block") {
+        menuIcon.style.display = "none";
+    } else {
+        menuIcon.style.display = "inline-block";
+    }
+}
+
 // This function is for the APOD section.
 function getPhotoOfTheDay() {
+    const apodContainer = document.getElementById("apodContainer")
     var request = new XMLHttpRequest()
     var api_key = 'n4s6U5u8Tc5MzpfYauL7w9vuiVo2Z8IzIliGYFok';
 
@@ -12,28 +23,23 @@ function getPhotoOfTheDay() {
             console.log(data);
 
             var container = document.createElement("div");
-            container.setAttribute("class", "apod");
+            container.setAttribute("class", "apodContainer");
 
             var title = document.createElement("h3");
-            title.style.color = "#ffffff";
             title.textContent = data.title;
+            title.setAttribute("class", "apodTitle");
 
-            var media = data.media_type;
-            if (media = "image") {
-                var img = document.createElement("img");
-                var imageUrl = data.url;
-                img.setAttribute("src", imageUrl);
-                img.setAttribute("class", "img");
-            } else {
-                console.log('error');
-            }
+            var img = document.createElement("img");
+            var imageUrl = data.url;
+            img.setAttribute("src", imageUrl);
+            img.setAttribute("class", "apodImg");
 
             var explanation = document.createElement("p");
-            explanation.style.color = "#ffffff";
             explanation.textContent = data.explanation;
+            explanation.setAttribute("class", "apodText");
 
-            container.appendChild(title);
             container.appendChild(img);
+            container.appendChild(title);
             container.appendChild(explanation);
 
             apodContainer.children[0].appendChild(container);
@@ -46,63 +52,70 @@ function getPhotoOfTheDay() {
     request.send()
 }
 
-// This function is for the ISS live tracking map.
-/*function getISScoordinates() {
-    var request = new XMLHttpRequest()
-
-    request.open('GET', 'http://api.open-notify.org/iss-now.json', true)
-    request.onload = function() {
-        var data = JSON.parse(this.response)
-
-        if (request.status >= 200 && request.status < 400) {
-            // Creating map options
-            var mapOptions = {
-            center: [data.iss_position.longitude, data.iss_position.latitude],
-            zoom: 8
-            }
-            
-            // Creating a map object
-            var map = new L.map('map', mapOptions);
-            
-            // Creating a Layer object
-            var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-            
-            // Adding layer to the map
-            map.addLayer(layer);
-
-            // Icon options
-            var iconOptions = {
-                iconUrl: 'https://image.flaticon.com/icons/svg/1789/1789775.svg',
-                iconSize: [50, 50]
-            }
-            // Creating a custom icon
-            var customIcon = L.icon(iconOptions);
-            
-            // Creating Marker Options
-            var markerOptions = {
-                title: "ISS Location",
-                clickable: true,
-                draggable: false,
-                icon: customIcon
-            }
-            // Creating a Marker
-            var marker = L.marker([data.iss_position.longitude, data.iss_position.latitude], markerOptions);
-            
-            // Adding popup to the marker
-            marker.bindPopup('Internation Space Station').openPopup();
-            
-            // Adding marker to the map
-            marker.addTo(map);
-
-            console.log(data.iss_position.latitude);
-            console.log(data.iss_position.longitude);
-
-        } else {
-            console.log('error')
-        }
+// The following functions are for the SpaceX Rocket Tech Section.
+function viewMoreFalcon() {
+    var moreInfo = document.getElementById("falconHidden");
+    if (moreInfo.style.display === "none") {
+      moreInfo.style.display = "block";
+    } else {
+      moreInfo.style.display = "none";
     }
-
-    request.send()
 }
 
-getISScoordinates();*/
+function viewMoreDragon() {
+    var moreInfo = document.getElementById("dragonHidden");
+    if (moreInfo.style.display === "none") {
+      moreInfo.style.display = "block";
+    } else {
+      moreInfo.style.display = "none";
+    }
+}
+
+function viewMoreRoadster() {
+    var moreInfo = document.getElementById("roadsterHidden");
+    if (moreInfo.style.display === "none") {
+      moreInfo.style.display = "block";
+    } else {
+      moreInfo.style.display = "none";
+    }
+}
+
+// This function is for the ISS live tracking map.
+function drawMap(){
+    var mapOptions = {
+        center: ['47.9213', '132.4005'],
+        zoom: 5
+    }
+    var map = new L.map('map', mapOptions);
+    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    map.addLayer(layer);
+
+    var iconOptions = {
+         iconUrl: 'https://image.flaticon.com/icons/svg/1789/1789775.svg',
+         iconSize: [50, 50]
+    }
+    var customIcon = L.icon(iconOptions);
+
+    var markerOptions = {
+        title: "ISS Location",
+        clickable: true,
+        draggable: false,
+        icon: customIcon
+    }
+
+    var marker;
+    setInterval(() => {
+    fetch('https://cors-anywhere.herokuapp.com/http://api.open-notify.org/iss-now.json')
+    .then((response) => {
+        return response.json()
+    })
+    .then((result) => {
+        marker = L.marker([result.iss_position.latitude, result.iss_position.longitude], markerOptions);
+        marker.bindPopup('Internation Space Station').openPopup();
+        marker.addTo(map)
+        console.log(result.iss_position);
+    })
+    }, 1000);
+}
+
+drawMap();

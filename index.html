@@ -5,28 +5,222 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome to Space Exploration</title>
-    <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
-    <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.typekit.net/wqr2mxh.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <script src="assets/scripts/script.js"></script>
 </head>
 <body>
     <header>
-        <div class="logoContainer">
-            <img src="/assets/logos/nasa-vector-logo.svg" alt="NASA Logo" class="nasaImage">
-            <img src="/assets/logos/spacex-vector-logo.svg" alt="SpaceX Logo" class="spacexImage">
+        <div class="navContainer">
+            <div class="logoContainer">
+                <img src="assets/logos/nasa-vector-logo.png" alt="NASA Logo" class="nasaImage">
+                <img src="assets/logos/spacex-vector-logo.png" alt="SpaceX Logo" class="spacexImage">
+                <div class="headernav">
+                    <div class="menubars">
+                        <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    <div id="menuContainer">
+                        <div class="menulinksright">
+                            <a href="index.html" class="rightlinks"><u>Home</u></a>
+                            <a href="experience.html" class="rightlinks">Experience Space</a>
+                            <a href="about.html" class="rightlinks">About</a>
+                            <a href="contact.html" class="rightlinks">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <nav>
-
-        </nav>
-        <div>
+        <div class="bannerTitle">
             <h1>EXPLORING NEW HEIGHTS AND THE UNKNOWN</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
     </header>
 
     <section class="partitionGradient">
-        <h2>REVOLUTIONIZING SPACE TECHNOLOGY</h2>
+        <div class="sectionTitle">
+            <h2 >REVOLUTIONIZING SPACE TECHNOLOGY</h2>
+            <p>For the benefit of all mankind.</p>
+        </div>
+        <div class="sectionContent">
+            <div class="sectionElement">
+                <div class="iconImage">
+                    <img src="assets/images/user-astronaut-solid.svg" alt="Astronaut">
+                </div> 
+                <p class="iconTitleBold">HUMANS</p>
+                <p class="iconTitleNormal">IN SPACE</p>
+            </div>
+            <div class="sectionElement">
+                <div class="iconImage">
+                    <img src="assets/images/rocket-solid.svg" alt="Astronaut">
+                </div>
+                <p class="iconTitleBold">ROCKET</p>
+                <p class="iconTitleNormal">FLIGHT</p>
+            </div>
+            <div class="sectionElement">
+                <div class="iconImage">
+                    <img src="assets/images/satellite-solid.svg" alt="Astronaut">
+                </div>
+                <p class="iconTitleBold">SPACE</p>
+                <p class="iconTitleNormal">TECHNOLOGY</p>
+            </div>
+            <div class="sectionElement">
+                <div class="iconImage">
+                    <img src="assets/images/space-shuttle-solid.svg" alt="Astronaut">
+                </div>
+                <p class="iconTitleBold">MOON</p>
+                <p class="iconTitleNormal">TO MARS</p>
+            </div>
+            <div class="sectionElement">
+                <div class="iconImage">
+                    <img src="assets/images/meteor-solid.svg" alt="Astronaut">
+                </div>
+                <p class="iconTitleBold">BEYOND</p>
+                <p class="iconTitleNormal">THE UNKNOWN</p>
+            </div>
+        </div>
+        <div class="moreButton">
+            <i class="fas fa-chevron-down"></i>
+            <p>DISCOVER MORE</p>
+        </div>
     </section>
+
+    <section class="whiteBackground">
+        <div class="imageOverlayContainer">
+            <img src="assets/images/image002.png" alt="NASA Astronaut" class="imageOverlay">
+        </div>
+        <div class="whiteBackgroundContent">
+            <h2>JOIN OUR MEN AND WOMEN INTO DEEP SPACE</h2>
+            <img src="assets/images/Line 1.png" alt="Line Division">
+            <p class="whiteBackgroundText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
+            <button class="involveButton">GET INVOLVED</button>
+        </div>
+    </section>
+
+    <section class="issLocation">
+        <div class="issContainer">
+            <h2>INTERNATIONAL SPACE STATION</h2>
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <section class="knowMore">
+        <div class="knowMoreContent">
+            <h2>WANT TO KNOW MORE ABOUT SPACE EXPLORATION?</h2>
+            <p class="knowMoreText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
+            <button class="contactButton">CONTACT US</button>
+        </div>
+    </section>
+
+    <section class="whiteBackground">
+        <div class="imageOverlayContainer">
+            <img src="assets/images/image004.png" alt="NASA Shuttle Launch" class="imageOverlay">
+        </div>
+        <div class="whiteBackgroundContent">
+            <h2>DON'T MISS OUT ON THE LATEST UPDATES AND LAUNCHES</h2>
+            <img src="assets/images/Line 1.png" alt="Line Division">
+            <input type="text" placeholder="Enter email for newsletter." class="inputEmail">
+            <input type="submit" value="SUBSCRIBE" class="subscribeButton">
+            <p class="whiteBackgroundText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="row"> 
+            <div class="column">
+                <div class="galleryImg">
+                    <img src="assets/images/image006.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image011.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image014.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image019.jpg">
+                </div>
+            </div>
+            <div class="column">
+                <div class="galleryImg">
+                    <img src="assets/images/image009.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image010.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image015.jpg">
+                </div>
+            </div>  
+            <div class="column">
+                <div class="galleryImg">
+                    <img src="assets/images/image008.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image012.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image016.jpg">
+                </div>
+            </div>
+            <div class="column">
+                <div class="galleryImg">
+                    <img src="assets/images/image007.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image013.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image022.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image018.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partitionGradient">
+        <div class="sectionTitle">
+            <h2 >YOU'RE NOW JUST A FEW MOMENTS AWAY FROM OUR NEXT MISSION</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="contactButton">CONTACT US</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contactContainer">
+            <div class="contactInfo">
+                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <h4>CALL US</h4>
+                <span class="spanWhite">Call us on:</span><br>
+                <span class="spanBlue">(202) 358-0001 (Office)</span>
+            </div>
+            <div class="contactInfo">
+                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <h4>MESSAGE US</h4>
+                <span class="spanWhite">Message us (24/7):</span><br>
+                <span class="spanBlue">(202) 358-0001 (Office)</span>
+            </div>
+            <div class="contactInfo">
+                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <h4>FIND US</h4>
+                <span class="spanWhite">Visit our facilities<br>in many locations</span>
+            </div>
+            <div class="contactInfo">
+                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <h4>MAIL US</h4>
+                <span class="spanWhite">Send us an email at:</span><br>
+                <span class="spanBlue">email@nasa.gov</span>
+            </div>
+        </div>
+        <div class="copyright">
+            <span>&#169; 2019 Noroff &#9632; PROJECT EXAM &#9632; Bryan Luis Villafuerte</span>
+        </div>
+    </footer>
 </body>
 </html>

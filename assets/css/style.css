@@ -4,52 +4,3274 @@ body {
     background-color: #000000;
     color: #ffffff;
     margin: 0%;
-}
-
-h1, h2, h3, h4, h5 {
     font-family: gibbs, sans-serif;
     font-style: normal;
-    font-weight: 700;
-}
-
-header {
-    height: 100vh;
-    background-image: url("https://pixabay.com/get/50e9d641485bb114b2d9847ccf293f7a1c22dfe0565978417d2972d0/spacex-693229.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.logoContainer {
-    display: flex;
-}
-
-.nasaImage {
-    width: 80px;
-}
-
-.spacexImage {
-    width: 150px;
-}
-
-.partitionGradient {
-    margin: 0px;
-    background-image: linear-gradient(#00467B, #00233E);
-    padding: 1px;
-}
-
-.apod {
+    font-weight: 400;
+    max-width: 100vw;
+    overflow-x: hidden;
     width: 100%;
 }
 
-.img {
-    width: 100%;
-    will-change: transform; 
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+@media only screen and (max-width: 480px) {
+    h1, h2, h3, h4, h5 {
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+    }
+    
+    p {
+        margin-bottom: 20px;
+    }
+    
+    .headernav {
+        float: right;
+        margin-top: 10px;
+    }
+    
+    .menubars {
+        font-size: 24px;
+        float: right;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .icon {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 0%;
+        border-radius: 5px;
+        transition: all linear .2s;
+    }
+    
+    .icon:hover {
+        text-decoration: none;
+        color: #262626;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+    
+    .rightlinks {
+        line-height: 200%;
+        display: block;
+        padding-left: 30px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    
+    .rightlinks:hover {
+        background-color: #ffffff;
+        color: #262626;
+        font-weight: bold;
+        width: 100%;
+        padding-right: 10px;
+    }
+    
+    #menuContainer {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        margin-top: 40px;
+        text-align: right;
+        padding-right: 30px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        background-color: rgb(0, 0, 0, .9);
+        position: absolute;
+        left: 0%;
+        -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+        animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    }
+    
+    @-webkit-keyframes menuContainer {
+        0% {
+            -webkit-transform: rotateX(-100deg);
+                    transform: rotateX(-100deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 1;
+        }
+        }
+        @keyframes swing-in-top-fwd {
+        0% {
+            -webkit-transform: rotateX(-100deg);
+                    transform: rotateX(-100deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 1;
+        }
+    }
+    
+    .menulinksright {
+        list-style: none;
+        padding-top: 10px;
+        padding-left: 0px;
+        font-size: 16px;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    header {
+        height: 100vh;
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image001.jpg");
+        background-size: cover;
+    }
+    
+    #experiencePage {
+        height: 350px;
+        background-image: linear-gradient(#00467B, #00233E);
+    }
+    
+    #aboutPage {
+        height: 350px;
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image018.jpg");
+        background-size: cover;
+        background-position: center;
+    
+    }
+    
+    .navContainer {
+        z-index: 1;
+        background-color: rgb(0, 0, 0, .8);
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+    }
+    
+    .nasaImage {
+        width: 50px;
+    }
+    
+    .spacexImage {
+        width: 120px;
+        padding-bottom: 12px;
+    }
+    
+    .bannerTitle {
+        width: 80%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 100px;
+    }
+    
+    .partitionGradient {
+        background-image: linear-gradient(#00467B, #00233E);
+        padding: 1px;
+        padding-bottom: 50px;
+        width: 100%;
+    }
+    
+    .sectionTitle {
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    
+    .sectionContent {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .sectionElement {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    
+    .iconImage {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .iconImage img {
+        height: 60px;
+    }
+    
+    .iconTitleBold {
+        margin-top: 0;
+        font-weight: 900;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    
+    .iconTitleNormal {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+    
+    .moreButton {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .moreButton p {
+        margin-top: 0px;
+    }
+    
+    .whiteBackground {
+        background-color: #ffffff;
+        padding-bottom: 1px;
+        color: #2A2A2A;
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+    
+    .imageOverlayContainer {
+        width: 100%;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .imageOverlay {
+        width: 100%;
+    }
+    
+    .whiteBackgroundText {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .whiteBackground img {
+        width: 100%;
+        margin-top: -90px;
+    }
+    
+    .involveButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        margin-top: 16px;
+        font-size: 16px;
+    }
+    
+    .involveButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    .grayBackground {
+        width: 100%;
+        padding: 20px;
+        background-color: #E5E5E5;
+        color: #2A2A2A
+    }
+    
+    .mapContainer {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .nasaMap {
+        width: 100%;
+        height: 480px;
+        border: none;
+        box-shadow: 0px 6px 10px #2A2A2A;
+    }
+    
+    #map {
+        width: 100%;
+        height: 480px;
+        border: none;
+        box-shadow: 0px 6px 10px #ffffff;
+    }
+    
+    .issLocation {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image003.png");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .issContainer {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .issContainer h2 {
+        margin-bottom: 20px;
+    }
+    
+    .knowMore {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image005.jpg");
+        padding-top: 1px;
+        background-size: cover;
+        color: #2A2A2A;
+        background-position: center;
+    }
+    
+    .knowMoreContent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 100px;
+    }
+    
+    .contactButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    
+    .contactButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    .subscribe {
+        background-color: #ffffff;
+        color: #2A2A2A;
+    }
+    
+    .subscribeImg {
+        width: 100%;
+    }
+    
+    .inputEmail {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        width: 60%;
+    }
+    
+    .subscribeButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+        width: 38%;
+        font-size: 16px;
+    }
+    
+    .subscribeButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+      
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 100%;
+    }
+    
+    .galleryImg {
+        vertical-align: middle;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .galleryImg img {
+        transition: transform .2s;
+    
+    }
+    
+    .galleryImg img:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        overflow: hidden;
+    
+    }
+    
+    footer {
+        background-color: #2A2A2A;
+    }
+    
+    .contactContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .contactInfo {
+        width: 50%;
+        text-align: center;
+        padding: 40px;
+    }
+    
+    .contactInfo img {
+        margin-bottom: -20px;
+    }
+    
+    .contactInfo h4 {
+        margin-bottom: -1px;
+    }
+    
+    .spanWhite {
+        font-size: 12px;
+    }
+    
+    .spanBlue {
+        font-size: 12px;
+        color: #91C4EB;
+    }
+    
+    .copyright {
+        background-color: #000000;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .apodHeader {
+        color: #ffffff;
+        text-align: left;
+        padding: 20px;
+    }
+    
+    #apodContainer {
+        text-align: left;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    
+    .apodImg {
+        width: 200vw;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: -1;
+        margin-top: -150px;
+        opacity: .5;
+    }
+    
+    .apodText {
+        padding-bottom: 0px;
+    }
+    
+    .apodButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        font-size: 16px;
+        margin: 20px;
+    }
+    
+    .apodButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #ffffff;
+    }
+    
+    #missionContainer {
+        color: #2A2A2A;
+        background-color: #ffffff;
+        padding: 20px;
+    }
+    
+    .rocketsContainer img {
+        margin-top: 30px;
+    }
+    
+    #falconHidden {
+        display: none;
+    }
+    
+    #dragonHidden {
+        display: none;
+    }
+    
+    #roadsterHidden {
+        display: none;
+    }
+    
+    #falconMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #falconMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    #missionVid {
+        width: 100%;
+        height: 315px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #dragonMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #dragonMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    #roadsterMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #roadsterMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    .whatsNext {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image019.png");
+        padding-top: 1px;
+        background-size: cover;
+        background-position: center;
+        background-color: #F3F3F3;
+        color: #2A2A2A;
+    }
+    
+    #nextNasa {
+        width: 100%;
+        height: 315px;
+        margin-top: 30px;
+    }
+    
+    .locations h4, p {
+        margin-bottom: 0px;
+    }
+    
+    .locations a {
+        color: #00467B;
+    }
 }
 
-@media all and (max-width: 480px) {
-    .logoContainer {
-        width: 10rem;
+@media only screen and  (min-width: 481px) {
+    h1, h2, h3, h4, h5 {
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+    }
+    
+    p {
+        margin-bottom: 20px;
+    }
+    
+    .headernav {
+        float: right;
+        margin-top: 10px;
+    }
+    
+    .menubars {
+        font-size: 24px;
+        float: right;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .icon {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 0%;
+        border-radius: 5px;
+        transition: all linear .2s;
+    }
+    
+    .icon:hover {
+        text-decoration: none;
+        color: #262626;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+    
+    .rightlinks {
+        line-height: 200%;
+        display: block;
+        padding-left: 30px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    
+    .rightlinks:hover {
+        background-color: #ffffff;
+        color: #262626;
+        font-weight: bold;
+        width: 100%;
+        padding-right: 10px;
+    }
+    
+    #menuContainer {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        margin-top: 40px;
+        text-align: right;
+        padding-right: 30px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        background-color: rgb(0, 0, 0, .9);
+        position: absolute;
+        left: 0%;
+        -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+        animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    }
+    
+    @-webkit-keyframes menuContainer {
+        0% {
+            -webkit-transform: rotateX(-100deg);
+                    transform: rotateX(-100deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 1;
+        }
+        }
+        @keyframes swing-in-top-fwd {
+        0% {
+            -webkit-transform: rotateX(-100deg);
+                    transform: rotateX(-100deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 1;
+        }
+    }
+    
+    .menulinksright {
+        list-style: none;
+        padding-top: 10px;
+        padding-left: 0px;
+        font-size: 16px;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    header {
+        height: 100vh;
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image001.jpg");
+        background-size: cover;
+    }
+    
+    #experiencePage {
+        height: 300px;
+        background-image: linear-gradient(#00467B, #00233E);
+    }
+    
+    #aboutPage {
+        height: 300px;
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image018.jpg");
+        background-size: cover;
+        background-position: center;
+    
+    }
+    
+    .navContainer {
+        z-index: 1;
+        background-color: rgb(0, 0, 0, .8);
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+    }
+    
+    .nasaImage {
+        width: 50px;
+    }
+    
+    .spacexImage {
+        width: 120px;
+        padding-bottom: 12px;
+    }
+    
+    .bannerTitle {
+        width: 80%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 100px;
+    }
+    
+    .partitionGradient {
+        background-image: linear-gradient(#00467B, #00233E);
+        padding: 1px;
+        padding-bottom: 50px;
+        width: 100%;
+    }
+    
+    .sectionTitle {
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    
+    .sectionContent {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .sectionElement {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 33.3%;
+        margin-bottom: 40px;
+    }
+    
+    .iconImage {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .iconImage img {
+        height: 80px;
+    }
+    
+    .iconTitleBold {
+        margin-top: 0;
+        font-weight: 900;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    
+    .iconTitleNormal {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+    
+    .moreButton {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .moreButton p {
+        margin-top: 0px;
+    }
+    
+    .whiteBackground {
+        background-color: #ffffff;
+        padding-bottom: 1px;
+        color: #2A2A2A;
+        padding: 20px;
+        padding-bottom: 50px;
+        display: flex;
+    }
+    
+    .imageOverlayContainer {
+        width: 150%;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .imageOverlay {
+        width: 100%;
+    }
+    
+    .whiteBackgroundText {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .whiteBackground img {
+        width: 100%;
+        margin-top: -90px;
+    }
+    
+    .involveButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        margin-top: 16px;
+        font-size: 16px;
+    }
+    
+    .involveButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    .grayBackground {
+        width: 100%;
+        padding: 20px;
+        background-color: #E5E5E5;
+        color: #2A2A2A
+    }
+
+    .grayBackground2 {
+        width: 100%;
+        padding: 20px;
+        background-color: #ffffff;
+        color: #2A2A2A
+    }
+    
+    .mapContainer {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .nasaMap {
+        width: 100%;
+        height: 480px;
+        border: none;
+        box-shadow: 0px 6px 10px #2A2A2A;
+    }
+    
+    #map {
+        width: 100%;
+        height: 480px;
+        border: none;
+        box-shadow: 0px 6px 10px #ffffff;
+    }
+    
+    .issLocation {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image003.png");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .issContainer {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .issContainer h2 {
+        margin-bottom: 20px;
+    }
+    
+    .knowMore {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image005.jpg");
+        padding-top: 1px;
+        background-size: cover;
+        color: #2A2A2A;
+        background-position: center;
+    }
+    
+    .knowMoreContent {
+        width: 60%;
+        padding: 20px;
+        padding-bottom: 100px;
+    }
+
+    .knowMoreContent2 {
+        width: 60%;
+        padding: 20px;
+        padding-bottom: 100px;
+        display: block;
+        margin-left: auto;
+    }
+    
+    .contactButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    
+    .contactButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    .subscribe {
+        background-color: #ffffff;
+        color: #2A2A2A;
+    }
+    
+    .subscribeImg {
+        width: 100%;
+    }
+    
+    .inputEmail {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        width: 60%;
+    }
+    
+    .subscribeButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+        width: 38%;
+        font-size: 16px;
+    }
+    
+    .subscribeButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+      
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 100%;
+    }
+    
+    .galleryImg {
+        vertical-align: middle;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .galleryImg img {
+        transition: transform .2s;
+    
+    }
+    
+    .galleryImg img:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        overflow: hidden;
+    
+    }
+    
+    footer {
+        background-color: #2A2A2A;
+    }
+    
+    .contactContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .contactInfo {
+        width: 25%;
+        text-align: center;
+        padding: 40px;
+    }
+    
+    .contactInfo img {
+        margin-bottom: -20px;
+    }
+    
+    .contactInfo h4 {
+        margin-bottom: -1px;
+    }
+    
+    .spanWhite {
+        font-size: 12px;
+    }
+    
+    .spanBlue {
+        font-size: 12px;
+        color: #91C4EB;
+    }
+    
+    .copyright {
+        background-color: #000000;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .apodHeader {
+        color: #ffffff;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .apodHeader img {
+        height: 3px;
+    }
+    
+    #apodContainer {
+        text-align: left;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    
+    .apodImg {
+        width: 200vw;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: -1;
+        margin-top: -150px;
+        opacity: .5;
+    }
+    
+    .apodText {
+        padding-bottom: 0px;
+    }
+    
+    .apodButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        font-size: 16px;
+        margin: 20px;
+    }
+    
+    .apodButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #ffffff;
+    }
+    
+    #missionContainer {
+        color: #2A2A2A;
+        background-color: #ffffff;
+        padding: 20px;
+    }
+    
+    .rocketsContainer img {
+        margin-top: 30px;
+    }
+    
+    #falconHidden {
+        display: none;
+    }
+    
+    #dragonHidden {
+        display: none;
+    }
+    
+    #roadsterHidden {
+        display: none;
+    }
+    
+    #falconMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #falconMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    #missionVid {
+        width: 100%;
+        height: 315px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #dragonMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #dragonMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    #roadsterMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #roadsterMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    .whatsNext {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image019.png");
+        padding-top: 1px;
+        background-size: cover;
+        background-position: center;
+        background-color: #F3F3F3;
+        color: #2A2A2A;
+    }
+    
+    #nextNasa {
+        width: 100%;
+        height: 315px;
+        margin-top: 30px;
+    }
+
+    .locationContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .locations {
+        width: 31%;
+        margin: 5px; 
+    }
+    
+    .locations h4, p {
+        margin-bottom: 0px;
+    }
+    
+    .locations a {
+        color: #00467B;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    h1, h2, h3, h4, h5 {
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+    }
+    
+    p {
+        margin-bottom: 20px;
+    }
+    
+    .headernav {
+        float: right;
+        margin-top: 10px;
+    }
+    
+    .menubars {
+        font-size: 24px;
+        float: right;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .icon {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 0%;
+        border-radius: 5px;
+        transition: all linear .2s;
+    }
+    
+    .icon:hover {
+        text-decoration: none;
+        color: #262626;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+    
+    .rightlinks {
+        line-height: 200%;
+        display: block;
+        padding-left: 30px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    
+    .rightlinks:hover {
+        background-color: #ffffff;
+        color: #262626;
+        font-weight: bold;
+        width: 100%;
+        padding-right: 10px;
+    }
+    
+    #menuContainer {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        margin-top: 40px;
+        text-align: right;
+        padding-right: 30px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        background-color: rgb(0, 0, 0, .9);
+        position: absolute;
+        left: 0%;
+        -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+        animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    }
+    
+    @-webkit-keyframes menuContainer {
+        0% {
+            -webkit-transform: rotateX(-100deg);
+                    transform: rotateX(-100deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 1;
+        }
+        }
+        @keyframes swing-in-top-fwd {
+        0% {
+            -webkit-transform: rotateX(-100deg);
+                    transform: rotateX(-100deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 1;
+        }
+    }
+    
+    .menulinksright {
+        list-style: none;
+        padding-top: 10px;
+        padding-left: 0px;
+        font-size: 16px;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    header {
+        height: 100vh;
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image001.jpg");
+        background-size: cover;
+    }
+    
+    #experiencePage {
+        height: 350px;
+        background-image: linear-gradient(#00467B, #00233E);
+    }
+    
+    #aboutPage {
+        height: 350px;
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image018.jpg");
+        background-size: cover;
+        background-position: center;
+    
+    }
+    
+    .navContainer {
+        z-index: 1;
+        background-color: rgb(0, 0, 0, .8);
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+    }
+    
+    .nasaImage {
+        width: 50px;
+    }
+    
+    .spacexImage {
+        width: 120px;
+        padding-bottom: 12px;
+    }
+    
+    .bannerTitle {
+        width: 80%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 100px;
+    }
+    
+    .partitionGradient {
+        background-image: linear-gradient(#00467B, #00233E);
+        padding: 1px;
+        padding-bottom: 50px;
+        width: 100%;
+    }
+    
+    .sectionTitle {
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    
+    .sectionContent {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .sectionElement {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    
+    .iconImage {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .iconImage img {
+        height: 60px;
+    }
+    
+    .iconTitleBold {
+        margin-top: 0;
+        font-weight: 900;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    
+    .iconTitleNormal {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+    
+    .moreButton {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .moreButton p {
+        margin-top: 0px;
+    }
+    
+    .whiteBackground {
+        background-color: #ffffff;
+        padding-bottom: 1px;
+        color: #2A2A2A;
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+    
+    .imageOverlayContainer {
+        width: 100%;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .imageOverlay {
+        width: 100%;
+    }
+    
+    .whiteBackgroundText {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .whiteBackground img {
+        width: 100%;
+        margin-top: -90px;
+    }
+    
+    .involveButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        margin-top: 16px;
+        font-size: 16px;
+    }
+    
+    .involveButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    .grayBackground {
+        width: 100%;
+        padding: 20px;
+        background-color: #E5E5E5;
+        color: #2A2A2A
+    }
+    
+    .mapContainer {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .nasaMap {
+        width: 100%;
+        height: 480px;
+        border: none;
+        box-shadow: 0px 6px 10px #2A2A2A;
+    }
+    
+    #map {
+        width: 100%;
+        height: 480px;
+        border: none;
+        box-shadow: 0px 6px 10px #ffffff;
+    }
+    
+    .issLocation {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image003.png");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .issContainer {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .issContainer h2 {
+        margin-bottom: 20px;
+    }
+    
+    .knowMore {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image005.jpg");
+        padding-top: 1px;
+        background-size: cover;
+        color: #2A2A2A;
+        background-position: center;
+    }
+    
+    .knowMoreContent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 100px;
+    }
+    
+    .contactButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    
+    .contactButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    .subscribe {
+        background-color: #ffffff;
+        color: #2A2A2A;
+    }
+    
+    .subscribeImg {
+        width: 100%;
+    }
+    
+    .inputEmail {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        width: 60%;
+    }
+    
+    .subscribeButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+        width: 38%;
+        font-size: 16px;
+    }
+    
+    .subscribeButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+      
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 100%;
+    }
+    
+    .galleryImg {
+        vertical-align: middle;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .galleryImg img {
+        transition: transform .2s;
+    
+    }
+    
+    .galleryImg img:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        overflow: hidden;
+    
+    }
+    
+    footer {
+        background-color: #2A2A2A;
+    }
+    
+    .contactContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .contactInfo {
+        width: 50%;
+        text-align: center;
+        padding: 40px;
+    }
+    
+    .contactInfo img {
+        margin-bottom: -20px;
+    }
+    
+    .contactInfo h4 {
+        margin-bottom: -1px;
+    }
+    
+    .spanWhite {
+        font-size: 12px;
+    }
+    
+    .spanBlue {
+        font-size: 12px;
+        color: #91C4EB;
+    }
+    
+    .copyright {
+        background-color: #000000;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .apodHeader {
+        color: #ffffff;
+        text-align: left;
+        padding: 20px;
+    }
+    
+    #apodContainer {
+        text-align: left;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    
+    .apodImg {
+        width: 300vw;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: -1;
+        margin-top: -150px;
+        opacity: .5;
+    }
+    
+    .apodText {
+        padding-bottom: 0px;
+    }
+    
+    .apodButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        font-size: 16px;
+        margin: 20px;
+    }
+    
+    .apodButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #ffffff;
+    }
+    
+    #missionContainer {
+        color: #2A2A2A;
+        background-color: #ffffff;
+        padding: 20px;
+    }
+    
+    .rocketsContainer img {
+        margin-top: 30px;
+    }
+    
+    #falconHidden {
+        display: none;
+    }
+    
+    #dragonHidden {
+        display: none;
+    }
+    
+    #roadsterHidden {
+        display: none;
+    }
+    
+    #falconMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #falconMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    #missionVid {
+        width: 100%;
+        height: 315px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #dragonMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #dragonMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    #roadsterMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #roadsterMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    .whatsNext {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image019.png");
+        padding-top: 1px;
+        background-size: cover;
+        background-position: center;
+        background-color: #F3F3F3;
+        color: #2A2A2A;
+    }
+    
+    #nextNasa {
+        width: 100%;
+        height: 315px;
+        margin-top: 30px;
+    }
+    
+    .locations h4, p {
+        margin-bottom: 0px;
+    }
+    
+    .locations a {
+        color: #00467B;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    h1, h2, h3, h4, h5 {
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+    }
+    
+    p {
+        margin-bottom: 20px;
+    }
+    
+    .headernav {
+        float: right;
+        margin-top: 10px;
+    }
+    
+    .menubars {
+        font-size: 24px;
+        float: right;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .icon {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 0%;
+        border-radius: 5px;
+        transition: all linear .2s;
+    }
+    
+    .icon:hover {
+        text-decoration: none;
+        color: #262626;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+    
+    .rightlinks {
+        line-height: 200%;
+        display: block;
+        padding-left: 30px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    
+    .rightlinks:hover {
+        background-color: #ffffff;
+        color: #262626;
+        font-weight: bold;
+        width: 100%;
+        padding-right: 10px;
+    }
+    
+    #menuContainer {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        margin-top: 40px;
+        text-align: right;
+        padding-right: 30px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        background-color: rgb(0, 0, 0, .9);
+        position: absolute;
+        left: 0%;
+        -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+        animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    }
+    
+    @-webkit-keyframes menuContainer {
+        0% {
+            -webkit-transform: rotateX(-100deg);
+                    transform: rotateX(-100deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 1;
+        }
+        }
+        @keyframes swing-in-top-fwd {
+        0% {
+            -webkit-transform: rotateX(-100deg);
+                    transform: rotateX(-100deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 1;
+        }
+    }
+    
+    .menulinksright {
+        list-style: none;
+        padding-top: 10px;
+        padding-left: 0px;
+        font-size: 16px;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    header {
+        height: 100vh;
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image001.jpg");
+        background-size: cover;
+    }
+    
+    #experiencePage {
+        height: 350px;
+        background-image: linear-gradient(#00467B, #00233E);
+    }
+    
+    #aboutPage {
+        height: 350px;
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image018.jpg");
+        background-size: cover;
+        background-position: center;
+    
+    }
+    
+    .navContainer {
+        z-index: 1;
+        background-color: rgb(0, 0, 0, .8);
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+    }
+    
+    .nasaImage {
+        width: 50px;
+    }
+    
+    .spacexImage {
+        width: 120px;
+        padding-bottom: 12px;
+    }
+    
+    .bannerTitle {
+        width: 80%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 100px;
+    }
+    
+    .partitionGradient {
+        background-image: linear-gradient(#00467B, #00233E);
+        padding: 1px;
+        padding-bottom: 50px;
+        width: 100%;
+    }
+    
+    .sectionTitle {
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    
+    .sectionContent {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .sectionElement {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    
+    .iconImage {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .iconImage img {
+        height: 60px;
+    }
+    
+    .iconTitleBold {
+        margin-top: 0;
+        font-weight: 900;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    
+    .iconTitleNormal {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+    
+    .moreButton {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .moreButton p {
+        margin-top: 0px;
+    }
+    
+    .whiteBackground {
+        background-color: #ffffff;
+        padding-bottom: 1px;
+        color: #2A2A2A;
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+    
+    .imageOverlayContainer {
+        width: 100%;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .imageOverlay {
+        width: 100%;
+    }
+    
+    .whiteBackgroundText {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .whiteBackground img {
+        width: 100%;
+        margin-top: -90px;
+    }
+    
+    .involveButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        margin-top: 16px;
+        font-size: 16px;
+    }
+    
+    .involveButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    .grayBackground {
+        width: 100%;
+        padding: 20px;
+        background-color: #E5E5E5;
+        color: #2A2A2A
+    }
+    
+    .mapContainer {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .nasaMap {
+        width: 100%;
+        height: 480px;
+        border: none;
+        box-shadow: 0px 6px 10px #2A2A2A;
+    }
+    
+    #map {
+        width: 100%;
+        height: 480px;
+        border: none;
+        box-shadow: 0px 6px 10px #ffffff;
+    }
+    
+    .issLocation {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image003.png");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .issContainer {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .issContainer h2 {
+        margin-bottom: 20px;
+    }
+    
+    .knowMore {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image005.jpg");
+        padding-top: 1px;
+        background-size: cover;
+        color: #2A2A2A;
+        background-position: center;
+    }
+    
+    .knowMoreContent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 100px;
+    }
+    
+    .contactButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    
+    .contactButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    .subscribe {
+        background-color: #ffffff;
+        color: #2A2A2A;
+    }
+    
+    .subscribeImg {
+        width: 100%;
+    }
+    
+    .inputEmail {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        width: 60%;
+    }
+    
+    .subscribeButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+        width: 38%;
+        font-size: 16px;
+    }
+    
+    .subscribeButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+      
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 100%;
+    }
+    
+    .galleryImg {
+        vertical-align: middle;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .galleryImg img {
+        transition: transform .2s;
+    
+    }
+    
+    .galleryImg img:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        overflow: hidden;
+    
+    }
+    
+    footer {
+        background-color: #2A2A2A;
+    }
+    
+    .contactContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .contactInfo {
+        width: 50%;
+        text-align: center;
+        padding: 40px;
+    }
+    
+    .contactInfo img {
+        margin-bottom: -20px;
+    }
+    
+    .contactInfo h4 {
+        margin-bottom: -1px;
+    }
+    
+    .spanWhite {
+        font-size: 12px;
+    }
+    
+    .spanBlue {
+        font-size: 12px;
+        color: #91C4EB;
+    }
+    
+    .copyright {
+        background-color: #000000;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .apodHeader {
+        color: #ffffff;
+        text-align: left;
+        padding: 20px;
+    }
+    
+    #apodContainer {
+        text-align: left;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    
+    .apodImg {
+        width: 300vw;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: -1;
+        margin-top: -150px;
+        opacity: .5;
+    }
+    
+    .apodText {
+        padding-bottom: 0px;
+    }
+    
+    .apodButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        font-size: 16px;
+        margin: 20px;
+    }
+    
+    .apodButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #ffffff;
+    }
+    
+    #missionContainer {
+        color: #2A2A2A;
+        background-color: #ffffff;
+        padding: 20px;
+    }
+    
+    .rocketsContainer img {
+        margin-top: 30px;
+    }
+    
+    #falconHidden {
+        display: none;
+    }
+    
+    #dragonHidden {
+        display: none;
+    }
+    
+    #roadsterHidden {
+        display: none;
+    }
+    
+    #falconMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #falconMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    #missionVid {
+        width: 100%;
+        height: 315px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #dragonMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #dragonMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    #roadsterMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #roadsterMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    .whatsNext {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image019.png");
+        padding-top: 1px;
+        background-size: cover;
+        background-position: center;
+        background-color: #F3F3F3;
+        color: #2A2A2A;
+    }
+    
+    #nextNasa {
+        width: 100%;
+        height: 315px;
+        margin-top: 30px;
+    }
+    
+    .locations h4, p {
+        margin-bottom: 0px;
+    }
+    
+    .locations a {
+        color: #00467B;
+    }
+}
+
+@media only screen and (min-width: 1281px) {
+    h1, h2, h3, h4, h5 {
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+    }
+    
+    p {
+        margin-bottom: 20px;
+    }
+    
+    .headernav {
+        float: right;
+        margin-top: 10px;
+    }
+    
+    .menubars {
+        font-size: 24px;
+        float: right;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .icon {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 0%;
+        border-radius: 5px;
+        transition: all linear .2s;
+    }
+    
+    .icon:hover {
+        text-decoration: none;
+        color: #262626;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+    
+    .rightlinks {
+        line-height: 200%;
+        display: block;
+        padding-left: 30px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    
+    .rightlinks:hover {
+        background-color: #ffffff;
+        color: #262626;
+        font-weight: bold;
+        width: 100%;
+        padding-right: 10px;
+    }
+    
+    #menuContainer {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        margin-top: 40px;
+        text-align: right;
+        padding-right: 30px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        background-color: rgb(0, 0, 0, .9);
+        position: absolute;
+        left: 0%;
+        -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+        animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    }
+    
+    @-webkit-keyframes menuContainer {
+        0% {
+            -webkit-transform: rotateX(-100deg);
+                    transform: rotateX(-100deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 1;
+        }
+        }
+        @keyframes swing-in-top-fwd {
+        0% {
+            -webkit-transform: rotateX(-100deg);
+                    transform: rotateX(-100deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+            -webkit-transform-origin: top;
+                    transform-origin: top;
+            opacity: 1;
+        }
+    }
+    
+    .menulinksright {
+        list-style: none;
+        padding-top: 10px;
+        padding-left: 0px;
+        font-size: 16px;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    header {
+        height: 100vh;
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image001.jpg");
+        background-size: cover;
+    }
+    
+    #experiencePage {
+        height: 350px;
+        background-image: linear-gradient(#00467B, #00233E);
+    }
+    
+    #aboutPage {
+        height: 350px;
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image018.jpg");
+        background-size: cover;
+        background-position: center;
+    
+    }
+    
+    .navContainer {
+        z-index: 1;
+        background-color: rgb(0, 0, 0, .8);
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+    }
+    
+    .nasaImage {
+        width: 50px;
+    }
+    
+    .spacexImage {
+        width: 120px;
+        padding-bottom: 12px;
+    }
+    
+    .bannerTitle {
+        width: 80%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 100px;
+    }
+    
+    .partitionGradient {
+        background-image: linear-gradient(#00467B, #00233E);
+        padding: 1px;
+        padding-bottom: 50px;
+        width: 100%;
+    }
+    
+    .sectionTitle {
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    
+    .sectionContent {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .sectionElement {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    
+    .iconImage {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .iconImage img {
+        height: 60px;
+    }
+    
+    .iconTitleBold {
+        margin-top: 0;
+        font-weight: 900;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    
+    .iconTitleNormal {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+    
+    .moreButton {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .moreButton p {
+        margin-top: 0px;
+    }
+    
+    .whiteBackground {
+        background-color: #ffffff;
+        padding-bottom: 1px;
+        color: #2A2A2A;
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+    
+    .imageOverlayContainer {
+        width: 100%;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .imageOverlay {
+        width: 100%;
+    }
+    
+    .whiteBackgroundText {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .whiteBackground img {
+        width: 100%;
+        margin-top: -90px;
+    }
+    
+    .involveButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        margin-top: 16px;
+        font-size: 16px;
+    }
+    
+    .involveButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    .grayBackground {
+        width: 100%;
+        padding: 20px;
+        background-color: #E5E5E5;
+        color: #2A2A2A
+    }
+    
+    .mapContainer {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .nasaMap {
+        width: 100%;
+        height: 480px;
+        border: none;
+        box-shadow: 0px 6px 10px #2A2A2A;
+    }
+    
+    #map {
+        width: 100%;
+        height: 480px;
+        border: none;
+        box-shadow: 0px 6px 10px #ffffff;
+    }
+    
+    .issLocation {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image003.png");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .issContainer {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .issContainer h2 {
+        margin-bottom: 20px;
+    }
+    
+    .knowMore {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image005.jpg");
+        padding-top: 1px;
+        background-size: cover;
+        color: #2A2A2A;
+        background-position: center;
+    }
+    
+    .knowMoreContent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 100px;
+    }
+    
+    .contactButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    
+    .contactButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    .subscribe {
+        background-color: #ffffff;
+        color: #2A2A2A;
+    }
+    
+    .subscribeImg {
+        width: 100%;
+    }
+    
+    .inputEmail {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        width: 60%;
+    }
+    
+    .subscribeButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+        width: 38%;
+        font-size: 16px;
+    }
+    
+    .subscribeButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #00467B;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+      
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 100%;
+    }
+    
+    .galleryImg {
+        vertical-align: middle;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .galleryImg img {
+        transition: transform .2s;
+    
+    }
+    
+    .galleryImg img:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        overflow: hidden;
+    
+    }
+    
+    footer {
+        background-color: #2A2A2A;
+    }
+    
+    .contactContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .contactInfo {
+        width: 50%;
+        text-align: center;
+        padding: 40px;
+    }
+    
+    .contactInfo img {
+        margin-bottom: -20px;
+    }
+    
+    .contactInfo h4 {
+        margin-bottom: -1px;
+    }
+    
+    .spanWhite {
+        font-size: 12px;
+    }
+    
+    .spanBlue {
+        font-size: 12px;
+        color: #91C4EB;
+    }
+    
+    .copyright {
+        background-color: #000000;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .apodHeader {
+        color: #ffffff;
+        text-align: left;
+        padding: 20px;
+    }
+    
+    #apodContainer {
+        text-align: left;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    
+    .apodImg {
+        width: 300vw;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: -1;
+        margin-top: -150px;
+        opacity: .5;
+    }
+    
+    .apodText {
+        padding-bottom: 0px;
+    }
+    
+    .apodButton {
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+        width: 200px;
+        font-size: 16px;
+        margin: 20px;
+    }
+    
+    .apodButton:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #ffffff;
+    }
+    
+    #missionContainer {
+        color: #2A2A2A;
+        background-color: #ffffff;
+        padding: 20px;
+    }
+    
+    .rocketsContainer img {
+        margin-top: 30px;
+    }
+    
+    #falconHidden {
+        display: none;
+    }
+    
+    #dragonHidden {
+        display: none;
+    }
+    
+    #roadsterHidden {
+        display: none;
+    }
+    
+    #falconMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #falconMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    #missionVid {
+        width: 100%;
+        height: 315px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #dragonMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #dragonMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    #roadsterMore {
+        width: 200px;
+        font-size: 16px;
+        background-color: #00467B;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: paralucent-text, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: none;
+        transition: all linear .2s;
+    }
+    
+    #roadsterMore:hover {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #00467B;
+        box-shadow: 0px 0px 12px #2A2A2A;
+    }
+    
+    .whatsNext {
+        background-image: url("https://bryvil.com/Projects/Project%20Exam/assets/images/image019.png");
+        padding-top: 1px;
+        background-size: cover;
+        background-position: center;
+        background-color: #F3F3F3;
+        color: #2A2A2A;
+    }
+    
+    #nextNasa {
+        width: 100%;
+        height: 315px;
+        margin-top: 30px;
+    }
+    
+    .locations h4, p {
+        margin-bottom: 0px;
+    }
+    
+    .locations a {
+        color: #00467B;
     }
 }

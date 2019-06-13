@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Experience Space unlike before.</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+    <link rel="stylesheet" href="https://use.typekit.net/wqr2mxh.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="assets/scripts/script.js"></script>
+</head>
+<body onload="getPhotoOfTheDay()">
+    <header id="experiencePage">
+        <div class="navContainer">
+            <div class="logoContainer">
+                <img src="assets/logos/nasa-vector-logo.png" alt="NASA Logo" class="nasaImage">
+                <img src="assets/logos/spacex-vector-logo.png" alt="SpaceX Logo" class="spacexImage">
+                <div class="headernav">
+                    <div class="menubars">
+                        <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    <div id="menuContainer">
+                        <div class="menulinksright">
+                            <a href="index.html" class="rightlinks"><u>Home</u></a>
+                            <a href="experience.html" class="rightlinks">Experience Space</a>
+                            <a href="about.html" class="rightlinks">About</a>
+                            <a href="contact.html" class="rightlinks">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bannerTitle">
+            <h1>EXPERIENCE SPACE</h1>
+            <p>Explore and see the wonders of deep space.</p>
+        </div>
+    </header>
+
+    <section class="apod">
+        <div id="apodContainer">
+            <div class="apodHeader">
+                <h2>NASA ASTRONOMY PICTURE OF THE DAY</h2>
+                <img src="/assets/images/Line 4.png" alt="Line Division">
+            </div>
+            <div></div>
+            <button class="apodButton">VIEW PHOTO</button>
+        </div>
+    </section>
+    
+    <section id="missionContainer">
+        <div class="missionHaader">
+            <h2>SPACEX ROCKET TECHNOLOGY</h2>
+            <img src="assets/images/Line 1.png" alt="Line Division">
+            <input type="text" placeholder="Enter email for newsletter." class="inputEmail">
+            <input type="submit" value="SUBSCRIBE" class="subscribeButton">
+            <p class="whiteBackgroundText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
+        </div>
+        <div class="rocketsContent">
+            <div class="rocketsContainer">
+                <div class="falconContainer">
+                    <h2>FALCON ROCKETS</h2>
+                    <iframe id="missionVid" src="https://www.youtube.com/embed/Z4TXCZG_NEY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
+                    <button id="falconMore" onclick="viewMoreFalcon()">VIEW MORE</button>
+                    <div id="falconHidden">
+                        <div id="falBox">
+                            <div class="falconContent">
+                                <h3>FALCON 1</h3>
+                            </div>
+                            <div class="falconContent">
+                                <h3>FALCON 9</h3>
+                            </div>
+                            <div class="falconContent">
+                                <h3>FALCON HEAVY</h3>
+                            </div>
+                            <div class="falconContent">
+                                <h3>BIG FALCON ROCKET</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/images/Line 1.png" alt="Line Division">
+                <div id="dragonContainer">
+                    <h2>DRAGON SPACECRAFTS</h2>
+                    <iframe id="missionVid" src="https://www.youtube.com/embed/78ATfCaBn6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
+                    <button id="dragonMore" onclick="viewMoreDragon()">VIEW MORE</button>
+                    <div id="dragonHidden">
+                        <div id="dragBox">
+                            <div class="dragonContent">
+                                <h3>DRAGON 1</h3>
+                            </div>
+                            <div class="dragonContent">
+                                <h3>DRAGON 2</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/images/Line 1.png" alt="Line Division">
+                <div class="roadsterContainer">
+                    <h2>TESLA ROADSTER</h2>
+                    <iframe id="missionVid" src="https://www.youtube.com/embed/A0FZIwabctw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
+                    <button id="roadsterMore" onclick="viewMoreRoadster">VIEW MORE</button>
+                    <div id="roadsterHidden">
+                        <div class="roadsterContent">
+                            <h3>ELON MUSK'S TESLA ROADSTER</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <section class="partitionGradient">
+            <div class="sectionTitle">
+                <h2 >NASA AND SPACEX IMAGE GALLERY</h2>
+            </div>
+        </section>
+        <div class="row"> 
+            <div class="column">
+                <div class="galleryImg">
+                    <img src="assets/images/image006.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image011.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image014.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image019.jpg">
+                </div>
+            </div>
+            <div class="column">
+                <div class="galleryImg">
+                    <img src="assets/images/image009.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image010.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image015.jpg">
+                </div>
+            </div>  
+            <div class="column">
+                <div class="galleryImg">
+                    <img src="assets/images/image008.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image012.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image016.jpg">
+                </div>
+            </div>
+            <div class="column">
+                <div class="galleryImg">
+                    <img src="assets/images/image007.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image013.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image022.jpg">
+                </div>
+                <div class="galleryImg">
+                    <img src="assets/images/image018.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contactContainer">
+            <div class="contactInfo">
+                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <h4>CALL US</h4>
+                <span class="spanWhite">Call us on:</span><br>
+                <span class="spanBlue">(202) 358-0001 (Office)</span>
+            </div>
+            <div class="contactInfo">
+                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <h4>MESSAGE US</h4>
+                <span class="spanWhite">Message us (24/7):</span><br>
+                <span class="spanBlue">(202) 358-0001 (Office)</span>
+            </div>
+            <div class="contactInfo">
+                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <h4>FIND US</h4>
+                <span class="spanWhite">Visit our facilities<br>in many locations</span>
+            </div>
+            <div class="contactInfo">
+                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <h4>MAIL US</h4>
+                <span class="spanWhite">Send us an email at:</span><br>
+                <span class="spanBlue">email@nasa.gov</span>
+            </div>
+        </div>
+        <div class="copyright">
+            <span>&#169; 2019 Noroff &#9632; PROJECT EXAM &#9632; Bryan Luis Villafuerte</span>
+        </div>
+    </footer>
+</body>
+</html>
