@@ -11,7 +11,7 @@ function openMenu() {
 // This function is for the APOD section.
 function getPhotoOfTheDay() {
     const apodContainer = document.getElementById("apodContainer")
-    var request = new XMLHttpRequest()
+    var request = new XMLHttpRequest();
     var api_key = 'n4s6U5u8Tc5MzpfYauL7w9vuiVo2Z8IzIliGYFok';
 
     request.open('GET', 'https://api.nasa.gov/planetary/apod?api_key=' + api_key, true)
@@ -53,34 +53,79 @@ function getPhotoOfTheDay() {
 }
 
 // The following functions are for the SpaceX Rocket Tech Section.
-function viewMoreFalcon() {
-    var moreInfo = document.getElementById("falconHidden");
-    if (moreInfo.style.display === "none") {
-      moreInfo.style.display = "block";
-    } else {
-      moreInfo.style.display = "none";
+    // Falcon Rocket Section
+    function viewMoreFalcon() {
+        var moreInfo = document.getElementById("falconHidden");
+        if (moreInfo.style.display === "none") {
+        moreInfo.style.display = "block";
+        } else {
+        moreInfo.style.display = "none";
+        }
     }
-}
 
-function viewMoreDragon() {
-    var moreInfo = document.getElementById("dragonHidden");
-    if (moreInfo.style.display === "none") {
-      moreInfo.style.display = "block";
-    } else {
-      moreInfo.style.display = "none";
+    function getFalconTech() {
+        const falBox = document.getElementById("falBox");
+        var request = new XMLHttpRequest();
+    
+        request.open("GET", "https://api.spacexdata.com/v3/rockets/falcon9", true)
+        request.onload = function() {
+            var data = JSON.parse(this.response)
+    
+            if (request.status >= 200 && request.status < 400) {
+                console.log(data);
+    
+                var containerFalcon = document.createElement("div");
+                containerFalcon.setAttribute("class", "containerFalcon")
+    
+                var falconTitle = document.createElement("h2");
+                falconTitle.textContent = data.rocket_name;
+    
+                var falconImage = document.createElement("img");
+                falconImage.setAttribute("src", "https://farm1.staticflickr.com/623/23660653516_5b6cb301d1_b.jpg");
+                
+                var falconDescription = document.createElement("p");
+                falconDescription.textContent = data.description;
+    
+                var falconWiki = document.createElement("a")
+                falconWiki.textContent = "More Info on Wikipedia";
+                falconWiki.setAttribute("href", data.wikipedia);
+    
+                containerFalcon.appendChild(falconTitle);
+                containerFalcon.appendChild(falconImage);
+                containerFalcon.appendChild(falconDescription);
+                containerFalcon.appendChild(falconWiki);
+    
+                falBox.children[0].appendChild(containerFalcon);
+    
+            } else {
+                console.log("error")
+            }
+        }
+    
+        request.send()
     }
-}
 
-function viewMoreRoadster() {
-    var moreInfo = document.getElementById("roadsterHidden");
-    if (moreInfo.style.display === "none") {
-      moreInfo.style.display = "block";
-    } else {
-      moreInfo.style.display = "none";
+    // Dragon Spacecraft Section
+    function viewMoreDragon() {
+        var moreInfo = document.getElementById("dragonHidden");
+        if (moreInfo.style.display === "none") {
+        moreInfo.style.display = "block";
+        } else {
+        moreInfo.style.display = "none";
+        }
     }
-}
 
-// This function is for the ISS live tracking map.
+    // Tesla Roadster Section
+    function viewMoreRoadster() {
+        var moreInfo = document.getElementById("roadsterHidden");
+        if (moreInfo.style.display === "none") {
+        moreInfo.style.display = "block";
+        } else {
+        moreInfo.style.display = "none";
+        }
+    }
+
+/* This function is for the ISS live tracking map.
 function drawMap(){
     var mapOptions = {
         center: ['47.9213', '132.4005'],
@@ -118,4 +163,4 @@ function drawMap(){
     }, 1000);
 }
 
-drawMap();
+drawMap();*/

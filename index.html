@@ -105,6 +105,46 @@
         <div class="issContainer">
             <h2>INTERNATIONAL SPACE STATION</h2>
             <div id="map"></div>
+            <script>
+                function drawMap(){
+                    var mapOptions = {
+                        center: ['47.9213', '132.4005'],
+                        zoom: 1
+                    }
+                    var map = new L.map('map', mapOptions);
+                    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+                    map.addLayer(layer);
+        
+                    var iconOptions = {
+                         iconUrl: 'https://image.flaticon.com/icons/svg/1789/1789775.svg',
+                         iconSize: [50, 50]
+                    }
+                    var customIcon = L.icon(iconOptions);
+        
+                    var markerOptions = {
+                        title: "ISS Location",
+                        clickable: true,
+                        draggable: false,
+                        icon: customIcon
+                    }
+        
+                    var marker;
+                    setInterval(() => {
+                    fetch('https://cors-anywhere.herokuapp.com/http://api.open-notify.org/iss-now.json')
+                    .then((response) => {
+                        return response.json()
+                    })
+                    .then((result) => {
+                        marker = L.marker([result.iss_position.latitude, result.iss_position.longitude], markerOptions);
+                        marker.bindPopup('Internation Space Station').openPopup();
+                        marker.addTo(map)
+                        console.log(result.iss_position);
+                    })
+                    }, 1000);
+                }
+        
+                drawMap();
+            </script>
         </div>
     </section>
 
@@ -116,7 +156,7 @@
         </div>
     </section>
 
-    <section class="whiteBackground">
+    <section class="whiteBackground2">
         <div class="imageOverlayContainer">
             <img src="assets/images/image004.png" alt="NASA Shuttle Launch" class="imageOverlay">
         </div>
