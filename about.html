@@ -26,10 +26,10 @@
                     </div>
                     <div id="menuContainer">
                         <div class="menulinksright">
-                            <a href="index.html" class="rightlinks"><u>Home</u></a>
+                            <a href="index.html" class="rightlinks">Home</a>
                             <a href="experience.html" class="rightlinks">Experience Space</a>
-                            <a href="about.html" class="rightlinks">About</a>
-                            <a href="contact.html" class="rightlinks">Contact Us</a>
+                            <a href="about.html" class="rightlinks" style="color: #ffffff;">About</a>
+                            <a onclick="openContactForm()" class="rightlinks">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -40,6 +40,25 @@
             <p>NASA and SpaceX</p>
         </div>
     </header>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactForm()">&times;</span>
+            <div class="contactTitle">
+                <h2>NEED SOME ANSWERS?</h2>
+                <p>Feel free to contact us and send in your questions.</p>
+            </div>
+            <div class="inputForm">
+                <form action="submit" class="contactForm">
+                    <input type="text" placeholder="Enter your name." required>
+                    <input type="email" placeholder="Enter your email address." required>
+                    <input type="tel" placeholder="Enter your phone number" required>
+                    <textarea type="text" placeholder="Enter your question here."></textarea>
+                    <input type="button" value="SUBMIT" class="btn">
+                </form>
+            </div>
+        </div>
+    </div>
 
     <section class="whiteBackground2">
         <div class="imageOverlayContainer">
@@ -56,15 +75,15 @@
         <div class="knowMoreContent2">
             <h2>WHAT'S NEXT FOR NASA?</h2>
             <p class="knowMoreText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
-            <iframe id="nextNasa" src="https://www.youtube.com/embed/aOk9ClxXw_8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+        <iframe id="nextNasa" src="https://www.youtube.com/embed/aOk9ClxXw_8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
     <section class="partitionGradient">
-        <div class="sectionTitle">
+        <div class="sectionTitle2">
             <h2 >SPACEX ADVANCING THE FUTURE</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
         </div>
     </section>
@@ -235,18 +254,18 @@
                 <span class="spanBlue">(202) 358-0001 (Office)</span>
             </div>
             <div class="contactInfo">
-                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <img src="assets/images/countdownAsset 5.svg" alt="contactIcons">
                 <h4>MESSAGE US</h4>
                 <span class="spanWhite">Message us (24/7):</span><br>
                 <span class="spanBlue">(202) 358-0001 (Office)</span>
             </div>
             <div class="contactInfo">
-                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <img src="assets/images/countdownAsset 2.svg" alt="contactIcons">
                 <h4>FIND US</h4>
                 <span class="spanWhite">Visit our facilities<br>in many locations</span>
             </div>
             <div class="contactInfo">
-                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <img src="assets/images/countdownAsset 1.svg" alt="contactIcons">
                 <h4>MAIL US</h4>
                 <span class="spanWhite">Send us an email at:</span><br>
                 <span class="spanBlue">email@nasa.gov</span>

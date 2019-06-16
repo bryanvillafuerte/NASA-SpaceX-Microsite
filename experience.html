@@ -12,7 +12,7 @@
     <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <script src="assets/scripts/script.js"></script>
 </head>
-<body onload="getPhotoOfTheDay(), getFalconTech()">
+<body onload="getPhotoOfTheDay(), modalPhotoOfTheDay(), getFalcon9Tech(), getFalconHeavyTech(), getDragon1Tech(), getDragon2Tech(), getRoadsterTech()">
     <header id="experiencePage">
         <div class="navContainer">
             <div class="logoContainer">
@@ -26,10 +26,10 @@
                     </div>
                     <div id="menuContainer">
                         <div class="menulinksright">
-                            <a href="index.html" class="rightlinks"><u>Home</u></a>
-                            <a href="experience.html" class="rightlinks">Experience Space</a>
+                            <a href="index.html" class="rightlinks">Home</a>
+                            <a href="experience.html" class="rightlinks" style="color: #ffffff;">Experience Space</a>
                             <a href="about.html" class="rightlinks">About</a>
-                            <a href="contact.html" class="rightlinks">Contact Us</a>
+                            <a onclick="openContactForm()" class="rightlinks">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -41,19 +41,44 @@
         </div>
     </header>
 
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactForm()">&times;</span>
+            <div class="contactTitle">
+                <h2>NEED SOME ANSWERS?</h2>
+                <p>Feel free to contact us and send in your questions.</p>
+            </div>
+            <div class="inputForm">
+                <form action="submit" class="contactForm">
+                    <input type="text" placeholder="Enter your name." required>
+                    <input type="email" placeholder="Enter your email address." required>
+                    <input type="tel" placeholder="Enter your phone number" required>
+                    <textarea type="text" placeholder="Enter your question here."></textarea>
+                    <input type="button" value="SUBMIT" class="btn">
+                </form>
+            </div>
+        </div>
+    </div>
+
     <section class="apod">
         <div id="apodContainer">
             <div class="apodHeader">
                 <h2>NASA ASTRONOMY PICTURE OF THE DAY</h2>
-                <img src="/assets/images/Line 4.png" alt="Line Division">
+                <img src="assets/images/Line 4.png" alt="Line Division">
             </div>
             <div></div>
-            <button class="apodButton">VIEW PHOTO</button>
+            <button class="apodButton" onclick="viewApodImg()">VIEW PHOTO</button>
+        </div>
+        <div id="apodModal">
+            <span class="close" onclick="closeApodImg()">&times;</span>
+            <div id="apodModalContent">
+                <div></div>
+            </div>
         </div>
     </section>
     
     <section id="missionContainer">
-        <div class="missionHaader">
+        <div class="missionHeader">
             <h2>SPACEX ROCKET TECHNOLOGY</h2>
             <img src="assets/images/Line 1.png" alt="Line Division">
             <input type="text" placeholder="Enter email for newsletter." class="inputEmail">
@@ -62,44 +87,49 @@
         </div>
         <div class="rocketsContent">
             <div class="rocketsContainer">
-                <div class="falconContainer">
+                <div id="falconContainer">
                     <h2>FALCON ROCKETS</h2>
                     <iframe id="missionVid" src="https://www.youtube.com/embed/Z4TXCZG_NEY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
                     <button id="falconMore" onclick="viewMoreFalcon()">VIEW MORE</button>
-                    <div id="falconHidden">
+                </div>
+                <div id="falconHidden">
+                    <div>
                         <div id="falBox">
+                            <div></div>
+                        </div>
+                        <div id="falHeavy">
                             <div></div>
                         </div>
                     </div>
                 </div>
-                <img src="assets/images/Line 1.png" alt="Line Division">
+                <img src="assets/images/Line 1.png" alt="Line Division" class="rocketLine">
                 <div id="dragonContainer">
                     <h2>DRAGON SPACECRAFTS</h2>
                     <iframe id="missionVid" src="https://www.youtube.com/embed/78ATfCaBn6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
                     <button id="dragonMore" onclick="viewMoreDragon()">VIEW MORE</button>
-                    <div id="dragonHidden">
-                        <div id="dragBox">
-                            <div class="dragonContent">
-                                <h3>DRAGON 1</h3>
-                            </div>
-                            <div class="dragonContent">
-                                <h3>DRAGON 2</h3>
-                            </div>
+                </div>
+                <div id="dragonHidden">
+                    <div>
+                        <div id="drag1Box">
+                            <div></div>
+                        </div>
+                        <div id="drag2Box">
+                            <div></div>
                         </div>
                     </div>
                 </div>
-                <img src="assets/images/Line 1.png" alt="Line Division">
-                <div class="roadsterContainer">
+                <img src="assets/images/Line 1.png" alt="Line Division" class="rocketLine">
+                <div id="roadsterContainer">
                     <h2>TESLA ROADSTER</h2>
                     <iframe id="missionVid" src="https://www.youtube.com/embed/A0FZIwabctw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
-                    <button id="roadsterMore" onclick="viewMoreRoadster">VIEW MORE</button>
-                    <div id="roadsterHidden">
-                        <div class="roadsterContent">
-                            <h3>ELON MUSK'S TESLA ROADSTER</h3>
-                        </div>
+                    <button id="roadsterMore" onclick="viewMoreRoadster()">VIEW MORE</button>
+                </div>
+                <div id="roadsterHidden">
+                    <div id="roadsterBox">
+                        <div></div>
                     </div>
                 </div>
             </div>
@@ -109,7 +139,7 @@
     <section class="gallery">
         <section class="partitionGradient">
             <div class="sectionTitle">
-                <h2 >NASA AND SPACEX IMAGE GALLERY</h2>
+                <h2 >NASA AND SPACEX<br>IMAGE GALLERY</h2>
             </div>
         </section>
         <div class="row"> 
@@ -175,18 +205,18 @@
                 <span class="spanBlue">(202) 358-0001 (Office)</span>
             </div>
             <div class="contactInfo">
-                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <img src="assets/images/countdownAsset 5.svg" alt="contactIcons">
                 <h4>MESSAGE US</h4>
                 <span class="spanWhite">Message us (24/7):</span><br>
                 <span class="spanBlue">(202) 358-0001 (Office)</span>
             </div>
             <div class="contactInfo">
-                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <img src="assets/images/countdownAsset 2.svg" alt="contactIcons">
                 <h4>FIND US</h4>
                 <span class="spanWhite">Visit our facilities<br>in many locations</span>
             </div>
             <div class="contactInfo">
-                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <img src="assets/images/countdownAsset 1.svg" alt="contactIcons">
                 <h4>MAIL US</h4>
                 <span class="spanWhite">Send us an email at:</span><br>
                 <span class="spanBlue">email@nasa.gov</span>

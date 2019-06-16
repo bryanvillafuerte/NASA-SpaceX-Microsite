@@ -26,10 +26,10 @@
                     </div>
                     <div id="menuContainer">
                         <div class="menulinksright">
-                            <a href="index.html" class="rightlinks"><u>Home</u></a>
+                            <a href="index.html" class="rightlinks" style="color: #ffffff;">Home</a>
                             <a href="experience.html" class="rightlinks">Experience Space</a>
                             <a href="about.html" class="rightlinks">About</a>
-                            <a href="contact.html" class="rightlinks">Contact Us</a>
+                            <a onclick="openContactForm()" class="rightlinks">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -40,6 +40,25 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
     </header>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactForm()">&times;</span>
+            <div class="contactTitle">
+                <h2>NEED SOME ANSWERS?</h2>
+                <p>Feel free to contact us and send in your questions.</p>
+            </div>
+            <div class="inputForm">
+                <form action="submit" class="contactForm">
+                    <input type="text" placeholder="Enter your name." required>
+                    <input type="email" placeholder="Enter your email address." required>
+                    <input type="tel" placeholder="Enter your phone number" required>
+                    <textarea type="text" placeholder="Enter your question here."></textarea>
+                    <input type="button" value="SUBMIT" class="btn">
+                </form>
+            </div>
+        </div>
+    </div>
 
     <section class="partitionGradient">
         <div class="sectionTitle">
@@ -104,6 +123,7 @@
     <section class="issLocation">
         <div class="issContainer">
             <h2>INTERNATIONAL SPACE STATION</h2>
+            <p>Wonder where the International Space Station is now? Maybe it's already above you. Check out our live tracker below.</p>
             <div id="map"></div>
             <script>
                 function drawMap(){
@@ -152,7 +172,7 @@
         <div class="knowMoreContent">
             <h2>WANT TO KNOW MORE ABOUT SPACE EXPLORATION?</h2>
             <p class="knowMoreText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus.</p>
-            <button class="contactButton">CONTACT US</button>
+            <button class="contactButton" onclick="openContactForm()">CONTACT US</button>
         </div>
     </section>
 
@@ -160,7 +180,7 @@
         <div class="imageOverlayContainer">
             <img src="assets/images/image004.png" alt="NASA Shuttle Launch" class="imageOverlay">
         </div>
-        <div class="whiteBackgroundContent">
+        <div class="whiteBackground2Content">
             <h2>DON'T MISS OUT ON THE LATEST UPDATES AND LAUNCHES</h2>
             <img src="assets/images/Line 1.png" alt="Line Division">
             <input type="text" placeholder="Enter email for newsletter." class="inputEmail">
@@ -228,7 +248,7 @@
         <div class="sectionTitle">
             <h2 >YOU'RE NOW JUST A FEW MOMENTS AWAY FROM OUR NEXT MISSION</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae dui sed mauris molestie varius. Nunc euismod, dui non ullamcorper finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button class="contactButton">CONTACT US</button>
+            <button class="contactButton" onclick="openContactForm()">CONTACT US</button>
         </div>
     </section>
 
@@ -241,18 +261,18 @@
                 <span class="spanBlue">(202) 358-0001 (Office)</span>
             </div>
             <div class="contactInfo">
-                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <img src="assets/images/countdownAsset 5.svg" alt="contactIcons">
                 <h4>MESSAGE US</h4>
                 <span class="spanWhite">Message us (24/7):</span><br>
                 <span class="spanBlue">(202) 358-0001 (Office)</span>
             </div>
             <div class="contactInfo">
-                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <img src="assets/images/countdownAsset 2.svg" alt="contactIcons">
                 <h4>FIND US</h4>
                 <span class="spanWhite">Visit our facilities<br>in many locations</span>
             </div>
             <div class="contactInfo">
-                <img src="assets/images/countdownAsset 6.svg" alt="contactIcons">
+                <img src="assets/images/countdownAsset 1.svg" alt="contactIcons">
                 <h4>MAIL US</h4>
                 <span class="spanWhite">Send us an email at:</span><br>
                 <span class="spanBlue">email@nasa.gov</span>
